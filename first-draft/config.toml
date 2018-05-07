@@ -1,3 +1,5 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "MetaExp: Interactive Exploration and Explanation of Large Knowledge Graphs"
+title = "MetaExp"
+[params]
+	subtitle = "Interactive Exploration and Explanation of Large Knowledge Graphs"
