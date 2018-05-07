@@ -48,10 +48,31 @@ table {
 }
 
 h1{
-	color: blue;
+	font-family: 'Roboto', sans-serif;
+	font-size: 36px;
+	color: black;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+h2{
+	font-family: 'Roboto', sans-serif;
+	font-size: 26px;
+	color: gray;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 #page-wrapper{
 	width: 80%;
 	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#content-section{
+	margin-top: 20px;
+}
+
+#footer-section{
+	margin-top: 20px;
 }
