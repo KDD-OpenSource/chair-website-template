@@ -53,13 +53,29 @@ h1{
 	color: black;
 	text-align: center;
 	margin-bottom: 10px;
+	text-shadow: 1px 1px gray;
 }
 
 h2{
 	font-family: 'Roboto', sans-serif;
-	font-size: 26px;
+	font-size: 30px;
 	color: gray;
 	text-align: center;
+	margin-bottom: 10px;
+	text-shadow: 0px 1px black;
+}
+
+h3{
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	color: black;
+	margin-bottom: 10px;
+}
+
+p{
+	font-family: Arial;
+	line-height: 1.25;
+	text-align: justify;
 	margin-bottom: 10px;
 }
 
@@ -75,4 +91,20 @@ h2{
 
 #footer-section{
 	margin-top: 20px;
+}
+
+#link-section .link-group .link-text a{
+	padding: 15px;
+
+}
+
+#authors-section .author-group .author-img img{
+	box-shadow: 1px 1px 2px 2px gray;
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+}
+
+#authors-section .author-group .author-name span{
+	padding: 10px 15px;
 }
