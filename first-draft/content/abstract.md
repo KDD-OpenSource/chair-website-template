@@ -2,9 +2,9 @@
 title: "Abstract"
 date: 2018-05-07T20:21:41+02:00
 draft: true
+type: "abstract"
 ---
-
-We present MetaExp, a system that assists the user during the
+We present **MetaExp**, a system that assists the user during the
 exploration of large knowledge graphs, given two sets of initial
 nodes. At its core, MetaExp presents a small set of meta-paths to
 the user, which are sequences of relationships among nodes. Such
