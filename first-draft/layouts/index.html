@@ -3,6 +3,7 @@
 	<head>
 		<title>{{ .Site.Title }}</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 	</head>
 	<body>
@@ -10,8 +11,114 @@
 			<div id="header-section">
 				{{ partial "header.html" . }}
 			</div>
-			<div id="content-section">
+			<div id="content-section" class="container-fluid">
+				<div class="row" style="margin-top: 20px;">
+					<h3>Authors</h3>
+				</div>
+				<div class="row" id="authors-section" style="margin-top: 5px;">
+					<div class="col"></div>
+					<div class="col author-group">
+						<div class="row author-img">
+							<img src="/images/authors/example.jpg" alt="Author One">
+						</div>
+						<div class="row author-name">
+							<span>Author One</span>
+						</div>
+					</div>
+					<div class="col author-group">
+						<div class="row author-img">
+							<img src="/images/authors/example.jpg" alt="Author One">
+						</div>
+						<div class="row author-name">
+							<span>Author Two</span>
+						</div>
+					</div>
+					<div class="col author-group">
+						<div class="row author-img">
+							<img src="/images/authors/example.jpg" alt="Author One">
+						</div>
+						<div class="row author-name">
+							<span>Author Three</span>
+						</div>
+					</div>
+					<div class="col author-group">
+						<div class="row author-img">
+							<img src="/images/authors/example.jpg" alt="Author One">
+						</div>
+						<div class="row author-name">
+							<span>Author Four</span>
+						</div>
+					</div>
+					<div class="col"></div>
+				</div>
 
+				<div class="row" style="margin-top: 20px;">
+					<h3>Abstract</h3>
+					<p>
+						We present MetaExp, a system that assists the user during the
+						exploration of large knowledge graphs, given two sets of initial
+						nodes. At its core, MetaExp presents a small set of meta-paths to
+						the user, which are sequences of relationships among nodes. Such
+						meta-paths do not overwhelm the user with complex structures, yet
+						they preserve semantically-rich relationships in a graph. MetaExp
+						engages the user in an interactive procedure, which involves simple
+						meta-paths evaluations to infer a user-specific similarity measure.
+						This similarity measure incorporates the domain knowledge and
+						the preferences of the user, overcoming the fundamental limitations
+						of previous methods based on local node neighborhoods or fixed
+						similarity scores. Our system provides a user-friendly interface for
+						searching initial nodes and guides the user towards progressive
+						refinements of the meta-paths. The system is demonstrated on three
+						datasets, an ontology, a movie database, and a biological network.
+					</p>
+				</div>
+
+				<div class="row" style="margin-top: 20px;">
+					<h3>Links</h3>
+				</div>
+				<div class="row" id="link-section">
+					<div class="col"></div>
+					<div class="col link-group">
+						<div class="row link-icon">
+							<img src="/icons/pdf.png" height="64">
+						</div>
+						<div class="row link-text">
+							<a href="https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/publications/davide/BehrensWWW2018Metaexp.pdf" download="Paper">Paper</a>
+						</div>
+					</div>
+					<div class="col link-group">
+						<div class="row link-icon">
+							<img src="/icons/github.png" height="64">
+						</div>
+						<div class="row link-text">
+							<a href="https://github.com/KDD-OpenSource" target="_blank">Code</a>
+						</div>
+					</div>
+					<div class="col link-group">
+						<div class="row link-icon">
+							<img src="/icons/youtube.png" height="64">
+						</div>
+						<div class="row link-text">
+							<a href="https://www.youtube.com/watch?v=7aBxVPUpUpM" target="_blank">Video</a>
+						</div>
+					</div>
+					<div class="col link-group">
+						<div class="row link-icon">
+							<img src="/icons/demo.png" height="64">
+						</div>
+						<div class="row link-text">
+							<a href="http://metaexp.herokuapp.com/" target="_blank">Demo</a>
+						</div>
+					</div>
+					<div class="col"></div>
+				</div>
+
+				<div class="row" style="margin-top: 20px;">
+					<h3>Partners</h3>
+				</div>
+				<div class="row" id="partners-section" style="margin-top: 5px;">
+					
+				</div>
 			</div>
 			<div id="footer-section">
 				{{ partial "footer.html" . }}
