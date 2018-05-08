@@ -79,6 +79,10 @@ p{
 	margin-bottom: 10px;
 }
 
+b{
+	font-weight: bold;
+}
+
 #page-wrapper{
 	width: 80%;
 	margin: 0 auto;
@@ -90,7 +94,7 @@ p{
 }
 
 #footer-section{
-	margin-top: 20px;
+	margin: 20px 0px;
 }
 
 #links-section .link-group .link-text a{
