@@ -11,6 +11,7 @@
 			<div id="header-section">
 				{{ partial "header.html" . }}
 			</div>
+
 			<div id="content-section" class="container-fluid">
 				<div class="row" style="margin-top: 20px;">
 					<h3>Authors</h3>
@@ -76,7 +77,7 @@
 				<div class="row" style="margin-top: 20px;">
 					<h3>Links</h3>
 				</div>
-				<div class="row" id="link-section">
+				<div class="row" id="links-section">
 					<div class="col"></div>
 					<div class="col link-group">
 						<div class="row link-icon">
@@ -117,9 +118,27 @@
 					<h3>Partners</h3>
 				</div>
 				<div class="row" id="partners-section" style="margin-top: 5px;">
-					
+					<div class="col"></div>
+					<div class="col partner-group">
+						<div class="row partner-logo">
+							<img src="/images/partners/neo4j.png">
+						</div>
+						<div class="row partner-name">
+							<a href="https://neo4j.com/" target="_blank">neo4j</a>
+						</div>
+					</div>
+					<div class="col partner-group">
+						<div class="row partner-logo">
+							<img src="/images/partners/helmholtz.jpg">
+						</div>
+						<div class="row partner-name">
+							<a href="https://www.helmholtz-muenchen.de/" target="_blank">Helmholtz München</a>
+						</div>
+					</div>
+					<div class="col"></div>
 				</div>
 			</div>
+
 			<div id="footer-section">
 				{{ partial "footer.html" . }}
 			</div>

@@ -93,7 +93,7 @@ p{
 	margin-top: 20px;
 }
 
-#link-section .link-group .link-text a{
+#links-section .link-group .link-text a{
 	padding: 15px;
 
 }
@@ -107,4 +107,12 @@ p{
 
 #authors-section .author-group .author-name span{
 	padding: 10px 15px;
+}
+
+#partners-section .partner-group .partner-logo img{
+	height: 100px;
+}
+
+#partners-section .partner-group .partner-name a{
+	padding: 10px 30px;
 }
