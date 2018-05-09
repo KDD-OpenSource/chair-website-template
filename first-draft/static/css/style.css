@@ -73,3 +73,11 @@ p{
 #partners-section .partner-group .partner-name a{
 	padding: 10px 30px;
 }
+
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}

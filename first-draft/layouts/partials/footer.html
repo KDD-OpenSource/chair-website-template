@@ -1,1 +1,10 @@
-<h4>Placeholder for a footer</h4>
+{{range where .Site.Pages "Type" "=" "references"}} 
+	<div class="row" style="margin-top: 20px;">
+		<h3>{{ .Title }}</h3>
+	</div>
+	<div class="row">
+		<p>{{ .Content }}</p>
+	</div>
+{{ end }}
+
+{{ partial "mathjax_support.html" . }}

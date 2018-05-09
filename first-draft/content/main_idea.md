@@ -4,6 +4,15 @@ date: 2018-05-08T16:10:28+02:00
 draft: true
 type: "main_idea"
 ---
+<div>$$
+    \left\\{
+    \begin{align}
+    \dot{x} & = \sigma(y-x) \newline
+    \dot{y} & = \rho x - y - xz \newline
+    \dot{z} & = -\beta z + xy
+    \end{align}
+    \right.
+$$</div>
 In the last few years, we have experienced a significant increment in
 the adoption of knowledge graphs to model complex phenomena in
 various domains. A knowledge graph is a heterogeneous network of
