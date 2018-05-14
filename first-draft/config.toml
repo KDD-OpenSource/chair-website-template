@@ -1,3 +1,22 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Data Management and Data Exploration"
+
+[menu]
+	[[menu.mainmenu]]
+	identifier = "chair"
+	name = "Chair"
+	url = "/"
+	weight = 1
+
+	[[menu.mainmenu]]
+	identifier = "team"
+	name = "Team"
+	url = "/team/"
+	weight = 2
+
+	[[menu.mainmenu]]
+	identifier = "publications"
+	name = "Publications"
+	url = "/publications/"
+	weight = 3
