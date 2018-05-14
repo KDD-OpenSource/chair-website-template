@@ -1,24 +1,3 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "MetaExp"
-
-[params]
-	subtitle = "Interactive Exploration and Explanation of Large Knowledge Graphs"
-
-	paper = "https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/publications/davide/BehrensWWW2018Metaexp.pdf"
-	code = "https://github.com/KDD-OpenSource"
-	video = "https://www.youtube.com/watch?v=7aBxVPUpUpM"
-	software = "http://metaexp.herokuapp.com/"
-
-	authors = [
-		["example.jpg", "Author One"],
-		["example.jpg", "Author Two"],
-		["example.jpg", "Author Three"],
-		["example.jpg", "Author Four"],
-		["example.jpg", "Author Five"]
-	]
-
-	partners = [
-		["neo4j.png", "https://neo4j.com/", "neo4j"],
-		["helmholtz.jpg", "https://www.helmholtz-muenchen.de/", "Helmholtz München"]
-	]
+title = "Data Management and Data Exploration"
