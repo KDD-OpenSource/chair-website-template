@@ -4,13 +4,25 @@
 		{{ partial "header_information.html" . }}
 	</head>
 	<body>
+		<div id="top-menu">
+			{{ partial "top_menu.html" }}
+		</div>
+		<div id="header-band">
+			<img src="/static/images/header_band.png">
+		</div>
 		<div id="page-wrapper" class="container-fluid">
 			<div id="header-section">
 				{{ partial "header.html" . }}
 			</div>
 
-			<div id="content-section">
-				
+			<div id="main-section">
+				<div id="side-menu">
+					
+				</div>
+
+				<div id="content-section">
+					<h1>{{ .Site.Title }}</h1>
+				</div>
 			</div>
 
 			<div id="footer-section">

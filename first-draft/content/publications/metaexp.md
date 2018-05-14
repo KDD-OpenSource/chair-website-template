@@ -33,7 +33,7 @@ partners: [
     {{ range $index, $author := .Params.authors }}
         <div class="col author-group">
             <div class="row author-img">
-                <img src="/images/authors/{{ index $author 0 }}" alt="Author One">
+                <img src="/static/images/authors/{{ index $author 0 }}" alt="Author One">
             </div>
             <div class="row author-name">
                 <span>{{ index $author 1 }}</span>
@@ -122,7 +122,7 @@ partners: [
     {{ range $index, $partner := .Params.Partners }}
         <div class="col partner-group">
             <div class="row partner-logo">
-                <img src="/images/partners/{{ index $partner 0 }}">
+                <img src="/static/images/partners/{{ index $partner 0 }}">
             </div>
             <div class="row partner-name">
                 <a href="{{ index $partner 1 }}" target="_blank">
