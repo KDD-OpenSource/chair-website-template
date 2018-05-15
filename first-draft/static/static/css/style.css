@@ -87,6 +87,44 @@ body{
 	flex: 1;
 }
 
+#side-menu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#side-menu ul li{
+	border-bottom: 1px solid #cbe0ed;
+}
+
+#side-meu ul li .active{
+	font-weight: bold;
+}
+
+#side-menu ul li:last-child{
+	border-bottom: none;
+}
+
+#side-menu ul li a{
+	display: block;
+	width: 100%;
+	padding: 10px 0px;
+}
+
+#side-menu ul li a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#side-menu ul .sub-menu li{
+	padding-left: 30px;
+	border-bottom: 1px solid #cbe0ed;
+}
+#side-menu ul .sub-menu li:last-child{
+	padding-left: 30px;
+	border-bottom: 1px solid #cbe0ed;
+}
+
 #content-section{
 	background: #FFF;
 	padding: 15px;
