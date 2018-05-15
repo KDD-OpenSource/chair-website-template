@@ -20,3 +20,9 @@ title = "Data Management and Data Exploration"
 		name = "Publications"
 		url = "/publications/"
 		weight = 3
+
+	[[menu.mainmenu]]
+		identifier = "data_and_code"
+		name = "Data & Code"
+		url = "/data_and_code/"
+		weight = 4
