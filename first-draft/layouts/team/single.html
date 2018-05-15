@@ -1,43 +1,45 @@
 {{ define "main" }}
 	<h1>{{ .Title }}</h1>
-	
-	<div class="row">
-		<div class="col-7">
-			<table>
-				<thead>
-					<tr>
-						<th colspan="2">{{ .Params.designation }}</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Phone:</td>
-						<td>{{ .Params.phone_number }}</td>
-					</tr>
-					<tr>
-						<td>Room:</td>
-						<td>{{ .Params.room }}</td>
-					</tr>
-					<tr>
-						<td>Email:</td>
-						<td>{{ .Params.mail }}</td>
-					</tr>
-				</tbody>
-				<tfoot>
-					{{ if isset .Params "num_of_publications" }}
+	{{ if not (isset .Params "no_individual_information") }}
+		<div class="row">
+			<div class="col-7">
+				<table>
+					<thead>
 						<tr>
-							<td>Publications:</td>
-							<td><a href="/publications">{{ .Params.num_of_publications }} entries</a></td>
+							<th colspan="2">{{ .Params.designation }}</th>
 						</tr>
-					{{ end }}
-				</tfoot>
-			</table>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Phone:</td>
+							<td>{{ .Params.phone_number }}</td>
+						</tr>
+						<tr>
+							<td>Room:</td>
+							<td>{{ .Params.room }}</td>
+						</tr>
+						<tr>
+							<td>Email:</td>
+							<td>{{ .Params.mail }}</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						{{ if isset .Params "num_of_publications" }}
+							<tr>
+								<td>Publications:</td>
+								<td><a href="/publications">{{ .Params.num_of_publications }} entries</a></td>
+							</tr>
+						{{ end }}
+					</tfoot>
+				</table>
+			</div>
+			<div class="col-5">
+				{{ if isset .Params "portrait_url" }}
+					<img style="float: right; max-width: 90%;" src="/static/images/staff/{{ .Params.portrait_url}}">
+				{{ end }}
+			</div>
 		</div>
-		<div class="col-5">
-			<img style="float: right; max-width: 90%;" src="/static/images/staff/{{ .Params.portrait_url}}">
-		</div>
-	</div>
-
+	{{ end }}
 	<p>
 		{{ .Content }}
 	</p>
