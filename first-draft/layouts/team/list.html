@@ -1,0 +1,33 @@
+{{ define "main" }}
+	<h1>{{.Title}}</h1>
+	<p>
+		{{.Content}}
+	</p>
+
+	<h3>Secretary</h3>
+	<ul>
+		{{ range where .Data.Pages "Type" "=" "secretary"}}
+			<li>
+				<a href="{{.Permalink}}">{{.Title}}</a>
+			</li>
+		{{ end }}
+	</ul>
+
+	<h3>Technical staff</h3>
+	<ul>
+		{{ range where .Data.Pages "Type" "=" "technical_staff"}}
+			<li>
+				<a href="{{.Permalink}}">{{.Title}}</a>
+			</li>
+		{{ end }}
+	</ul>
+
+	<h3>Scientific staff</h3>
+	<ul>
+		{{ range where .Data.Pages "Type" "=" "scientific_staff"}}
+			<li>
+				<a href="{{.Permalink}}">{{.Title}}</a>
+			</li>
+		{{ end }}
+	</ul>
+{{ end }}
