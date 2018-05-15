@@ -18,7 +18,7 @@ h3{
 	font-family: 'Roboto', sans-serif;
 	font-size: 100%;
 	color: black;
-	margin-bottom: 20px;
+	margin: 10px 0px;
 	font-weight: bold;
 	color: #666666;
 }
@@ -130,7 +130,7 @@ table tfoot tr{
 	border-bottom: 1px solid #cbe0ed;
 }
 
-#side-meu ul li .active{
+#side-menu ul .active{
 	font-weight: bold;
 }
 

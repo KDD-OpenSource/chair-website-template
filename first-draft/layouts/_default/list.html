@@ -1,6 +1,13 @@
 {{ define "main" }}
-	<h1>{{ .Title }}</h1>
+	<h1>{{.Title}}</h1>
 	<p>
-		{{ .Content }}
+		{{.Content}}
 	</p>
+
+	<ul class="subpages-list">
+		{{ range .Data.Pages.ByDate.Reverse }}
+			{{ .Render "li" }}
+		{{ end }}
+	</ul>
+
 {{ end }}

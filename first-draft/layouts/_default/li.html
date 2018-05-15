@@ -1,0 +1,12 @@
+<li>
+	<h3 style="border-bottom: 1px solid #666666; padding-bottom: 5px;">
+		<a href="{{.Permalink}}">{{.Title}}</a>
+		<span style="float: right;">
+			{{ dateFormat "Monday, Jan 2, 2006" .Date }}
+		</span>
+	</h3>
+	<div class="short-info">
+		{{ .Summary }} ...
+		<a href="{{.Permalink}}">Read more</a>
+	</div>
+</li>

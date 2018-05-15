@@ -8,4 +8,3 @@ menu:
     parent: "chair"
     weight: 100
 ---
-This is our News-Page
