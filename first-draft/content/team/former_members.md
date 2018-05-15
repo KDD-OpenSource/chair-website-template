@@ -9,5 +9,5 @@ menu:
     parent: "team"
     weight: 130
 ---
-This is a page about former Members
+This is a page about former members. Do we really need this?
 
