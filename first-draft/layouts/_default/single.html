@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+	<head>
+		<meta charset="utf-8">
+
+		{{ partial "meta.html" . }}
+
+		<base href="{{ .Site.BaseURL }}">
+		<title>{{ .Site.Title }}</title>
+		<link rel="canonical" href="{{ .Permalink }}">
+		{{ if .RSSLink }}
+			<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
+		{{ end }}
+		
+		{{ partial "header_includes.html" . }}
+	</head>
+	<body>
+		<div id="top-menu">
+			{{ partial "top_menu.html" }}
+		</div>
+		<div id="header-band">
+			<img src="/static/images/header_band.png">
+		</div>
+		<div id="page-wrapper" class="container-fluid">
+			<div id="header-section">
+				{{ partial "header.html" . }}
+			</div>
+
+			<div id="main-section">
+				<div id="side-menu">
+					{{ partial "main_menu.html" . }}
+				</div>
+
+				<div id="content-section">
+					<h1>{{ .Title }}</h1>
+					{{ .Content }}
+				</div>
+			</div>
+
+			<div id="footer-section">
+				{{ partial "footer.html" . }}
+			</div>
+		</div>
+	</body>
+</html>
