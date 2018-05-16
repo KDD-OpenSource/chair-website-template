@@ -18,8 +18,6 @@ partners: [
     ["helmholtz.svg", "https://www.helmholtz-muenchen.de/", "Helmholtz München"]
 ]
 ---
-
-<h1>Metaexp</h1>
 <h2>Interactive Exploration and Explanation of Large Knowledge Graphs</h2>
 <div class="container-fluid">
 <div class="row" style="margin-top: 20px;">
