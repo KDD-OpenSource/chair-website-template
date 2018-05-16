@@ -15,31 +15,42 @@ authors: [
 ]
 partners: [
     ["neo4j.png", "https://neo4j.com/", "neo4j"],
-    ["helmholtz.jpg", "https://www.helmholtz-muenchen.de/", "Helmholtz München"]
+    ["helmholtz.svg", "https://www.helmholtz-muenchen.de/", "Helmholtz München"]
 ]
 ---
 
-<h1>
-    {{ .Params.title}}
-</h1>
-<h2>
-{{ .Params.subtitle}}
-</h2>
+<h1>Metaexp</h1>
+<h2>Interactive Exploration and Explanation of Large Knowledge Graphs</h2>
+<div class="container-fluid">
 <div class="row" style="margin-top: 20px;">
     <h3>Authors</h3>
 </div>
 <div class="row" id="authors-section" style="margin-top: 5px;">
     <div class="col"></div>
-    {{ range $index, $author := .Params.authors }}
-        <div class="col author-group">
-            <div class="row author-img">
-                <img src="/static/images/authors/{{ index $author 0 }}" alt="Author One">
-            </div>
-            <div class="row author-name">
-                <span>{{ index $author 1 }}</span>
-            </div>
+    <div class="col author-group">
+        <div class="row author-img">
+            <img src="/static/images/authors/example.jpg" alt="Author One">
         </div>
-    {{ end }}
+        <div class="row author-name">
+            <span>Author One</span>
+        </div>
+    </div>
+    <div class="col author-group">
+        <div class="row author-img">
+            <img src="/static/images/authors/example.jpg" alt="Author One">
+        </div>
+        <div class="row author-name">
+            <span>Author Two</span>
+        </div>
+    </div>
+    <div class="col author-group">
+        <div class="row author-img">
+            <img src="/static/images/authors/example.jpg" alt="Author One">
+        </div>
+        <div class="row author-name">
+            <span>Author Three</span>
+        </div>
+    </div>
     <div class="col"></div>
 </div>
 
@@ -48,7 +59,7 @@ partners: [
 </div>
 <div class="row">
     <p>
-        We present **MetaExp**, a system that assists the user during the
+        We present <b>MetaExp</b>, a system that assists the user during the
         exploration of large knowledge graphs, given two sets of initial
         nodes. At its core, MetaExp presents a small set of meta-paths to
         the user, which are sequences of relationships among nodes. Such
@@ -71,46 +82,38 @@ partners: [
 </div>
 <div class="row" id="links-section">
     <div class="col"></div>
-    {{ if .Params.Paper }}
         <div class="col link-group">
             <div class="row link-icon">
-                <img src="/icons/pdf.png" height="64">
+                <img src="/static/icons/pdf.png" height="64">
             </div>
             <div class="row link-text">
-                <a href="{{ .Params.Paper }}" download="Paper">Paper</a>
+                <a href="https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/publications/davide/BehrensWWW2018Metaexp.pdf" download="Paper">Paper</a>
             </div>
         </div>
-    {{ end }}
-    {{ if .Params.Code }}
         <div class="col link-group">
             <div class="row link-icon">
-                <img src="/icons/github.png" height="64">
+                <img src="/static/icons/github.png" height="64">
             </div>
             <div class="row link-text">
-                <a href="{{ .Params.Code }}" target="_blank">Code</a>
+                <a href="https://github.com/KDD-OpenSource" target="_blank">Code</a>
             </div>
         </div>
-    {{ end }}
-    {{ if .Params.Video }}
         <div class="col link-group">
             <div class="row link-icon">
-                <img src="/icons/youtube.png" height="64">
+                <img src="/static/icons/youtube.png" height="64">
             </div>
             <div class="row link-text">
-                <a href="{{ .Params.Video }}" target="_blank">Video</a>
+                <a href="https://www.youtube.com/watch?v=7aBxVPUpUpM" target="_blank">Video</a>
             </div>
         </div>
-    {{ end }}
-    {{ if .Params.Software }}
         <div class="col link-group">
             <div class="row link-icon">
-                <img src="/icons/demo.png" height="64">
+                <img src="/static/icons/demo.png" height="64">
             </div>
             <div class="row link-text">
-                <a href="{{ .Params.Software }}" target="_blank">Demo</a>
+                <a href="http://metaexp.herokuapp.com/" target="_blank">Demo</a>
             </div>
         </div>
-    {{ end }}
     <div class="col"></div>
 </div>
 
@@ -119,18 +122,26 @@ partners: [
 </div>
 <div class="row" id="partners-section" style="margin-top: 5px;">
     <div class="col"></div>
-    {{ range $index, $partner := .Params.Partners }}
-        <div class="col partner-group">
-            <div class="row partner-logo">
-                <img src="/static/images/partners/{{ index $partner 0 }}">
-            </div>
-            <div class="row partner-name">
-                <a href="{{ index $partner 1 }}" target="_blank">
-                    {{ index $partner 2 }}
-                </a>
-            </div>
+    <div class="col partner-group">
+        <div class="row partner-logo">
+            <img src="/static/images/partners/neo4j.png">
         </div>
-    {{ end }}
+        <div class="row partner-name">
+            <a href="https://neo4j.com/" target="_blank">
+                neo4j
+            </a>
+        </div>
+    </div>
+    <div class="col partner-group">
+        <div class="row partner-logo">
+            <img src="/static/images/partners/helmholtz.svg">
+        </div>
+        <div class="row partner-name">
+            <a href="https://www.helmholtz-muenchen.de/" target="_blank">
+                Helmholtz München
+            </a>
+        </div>
+    </div>
     <div class="col"></div>
 </div>
 
@@ -140,13 +151,11 @@ partners: [
 <div class="row">
     <p>
         <div>$$
-            \left\\{
             \begin{align}
             \dot{x} & = \sigma(y-x) \newline
             \dot{y} & = \rho x - y - xz \newline
             \dot{z} & = -\beta z + xy
             \end{align}
-            \right.
         $$</div>
         In the last few years, we have experienced a significant increment in
         the adoption of knowledge graphs to model complex phenomena in
@@ -191,7 +200,7 @@ partners: [
         on the graph through meta-paths that can be easily executed as
         queries.
 
-        **Motivating Example:** Imagine a film critic, who is working on a
+        <b>Motivating Example:</b> Imagine a film critic, who is working on a
         research concerning the German film panorama. They would like
         to learn more about the reason behind the international inclination
         of certain actors. For this purpose, the film critic defines a set of rep-
@@ -213,7 +222,7 @@ partners: [
         which will help finding international working German actors like
         Marlene Dietrich.
 
-        **The MetaExp Showcase:** With MetaExp we showcase an innova-
+        <b>The MetaExp Showcase:</b> With MetaExp we showcase an innova-
         tive exploration system to explain the similarity between two sets of
         nodes guided by means of meta-paths while taking explicit domain
         knowledge into account. While previous approaches embed a static
@@ -278,4 +287,5 @@ partners: [
         the displayed nodes to the input sets, thereby refine the query and
         start a new iteration of the whole process.
     </p>
+</div>
 </div>
