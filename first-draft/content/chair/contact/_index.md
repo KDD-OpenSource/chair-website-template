@@ -8,4 +8,18 @@ menu:
     parent: "chair"
     weight: 110
 ---
-This is our Contact-Page
+### Prof. Dr. Emmanuel Müller
+
+Knowledge Discovery and Data Mining
+
+E-Mail: emmanuel.mueller(at)hpi.de
+<br><br>
+### Assistant: Diana Stephan
+
+Tel.: +49 (0)331 5509-280
+
+Fax: +49 (0)331 5509-287
+
+E-Mail: office-mueller(at)hpi.de
+<br><br><br>
+Our offices are in **Building E on HPI Campus II**.
