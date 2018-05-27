@@ -1,0 +1,20 @@
+<h3 style="color: #0067a6;">Guided Search</h3>
+<ul>
+	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+		<li>
+			<h3>
+				{{ $taxonomyname }}
+			</h3>
+			<ul>
+				{{ range $key, $value := $taxonomy }}
+					<li>
+						<a href='{{ print ($taxonomyname | urlize) "/" ($key | urlize) }}'>{{ $key }}</a> 
+						<span style="color: #666666;">
+							({{ $value.Count }})
+						</span>
+					</li>
+				{{ end }}
+			</ul>
+		</li>
+	{{ end }}
+</ul>

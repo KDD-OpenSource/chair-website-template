@@ -1,6 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Data Management and Data Exploration"
+preserveTaxonomyNames = true
 
 [menu]
 	[[menu.mainmenu]]
@@ -26,3 +27,9 @@ title = "Data Management and Data Exploration"
 		name = "Data & Code"
 		url = "/data_and_code/"
 		weight = 4
+
+[taxonomies]
+  conference = "conference"
+  year = "year"
+  publication_type = "publication_type"
+  research_area = "research_area"

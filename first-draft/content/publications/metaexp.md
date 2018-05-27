@@ -17,6 +17,11 @@ partners: [
     ["neo4j.png", "https://neo4j.com/", "neo4j"],
     ["helmholtz.svg", "https://www.helmholtz-muenchen.de/", "Helmholtz München"]
 ]
+conference: "WWW"
+year: "2018"
+research_area: "Graph Exploration"
+publication_type: "Demo Paper"
+
 ---
 ### Abstract
 We present **MetaExp**, a system that assists the user during the
