@@ -21,6 +21,7 @@ conference: "WWW"
 year: "2018"
 research_area: "Graph Exploration"
 publication_type: "Demo Paper"
+authors: ["Testauthor 1", "Testauthor 2", "Testauthor 3"]
 
 ---
 ### Abstract

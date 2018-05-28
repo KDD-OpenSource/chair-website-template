@@ -29,7 +29,8 @@ preserveTaxonomyNames = true
 		weight = 4
 
 [taxonomies]
-  conference = "/publications/conference"
+  conference = "conference"
   year = "year"
   publication_type = "publication_type"
   research_area = "research_area"
+  author = "authors"
