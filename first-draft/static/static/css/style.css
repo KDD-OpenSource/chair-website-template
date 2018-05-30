@@ -62,6 +62,12 @@ table tfoot tr{
 	margin: 0px 0px 10px 0px;
 }
 
+.subpages-list ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
 .subpages-list li{
 	margin: 5px 0px;
 }
