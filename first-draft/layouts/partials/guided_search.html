@@ -3,7 +3,7 @@
 	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
 		<li>
 			<h3>
-				{{ $taxonomyname }}
+				{{ $taxonomyname }} ({{ len $taxonomy }})
 			</h3>
 			<ul>
 				{{ range $key, $value := $taxonomy }}
