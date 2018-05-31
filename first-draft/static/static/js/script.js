@@ -4,4 +4,8 @@ $(document).ready(function(){
 		$("#bibtex-dialog").dialog();
 	});
 
+	if(!parseInt($("#bibtex-available").val())){
+		alert("No bibtex available!");
+	}
+
 });
