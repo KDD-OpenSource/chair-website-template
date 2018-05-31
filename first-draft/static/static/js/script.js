@@ -8,13 +8,14 @@ $(document).ready(function(){
 		var author = $("#author-field").val();
 		var title = $("#title-field").val();
 		var year = $("#year-field").val();
+		var booktitle = $("#booktitle-field").val();
 
 		var bibtex_string = 
 						"@inproceedings{{0},<br>\
 						title={{1}},<br>\
 						author={{2}},<br>\
-						booktitle={Need to fill in},<br>\
-						year={{3}} }".format(generateBibtexKey(title, author, year),title, author, year);
+						booktitle={{3}},<br>\
+						year={{4}} }".format(generateBibtexKey(title, author, year),title, author, booktitle, year);
 
 		$("#bibtex-dialog").html(bibtex_string);
 	}
