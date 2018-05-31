@@ -10,6 +10,9 @@
 	<input id="bibtex-available" type="hidden" value=1>
 {{ else }}
 	<input id="bibtex-available" type="hidden" value=0>
+	<input id="author-field" type="hidden" value='{{ delimit .Params.Authors ", " }}'>
+	<input id="title-field" type="hidden" value="{{ .Title }}: {{ .Params.Subtitle }}">
+	<input id="year-field" type="hidden" value="{{ .Params.Year }}">
 {{ end }}
 
 <div title="Cite" style="display: none;" id="bibtex-dialog">
