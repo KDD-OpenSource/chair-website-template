@@ -16,9 +16,6 @@
 		{{ else }}
 			{{.Title}}
 		{{ end }}
-		<span style="float: right;">
-			{{ dateFormat "Monday, Jan 2, 2006" .Date }}
-		</span>
 	</h3>
 	{{ if gt (len .Content) 0 }}
 		<div class="short-info">
