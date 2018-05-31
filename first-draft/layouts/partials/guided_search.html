@@ -1,20 +1,47 @@
 <h3 style="color: #0067a6;">Guided Search</h3>
 <ul>
-	{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-		<li>
-			<h3>
-				{{ $taxonomyname }} ({{ len $taxonomy }})
-			</h3>
-			<ul>
-				{{ range $key, $value := $taxonomy }}
-					<li>
-						<a href='{{ print ($taxonomyname | urlize) "/" ($key | urlize) }}'>{{ $key }}</a> 
-						<span style="color: #666666;">
-							({{ $value.Count }})
-						</span>
-					</li>
-				{{ end }}
-			</ul>
-		</li>
-	{{ end }}
+	<li>
+		<h3>Research Area ({{ len .Site.Taxonomies.research_area }})</h3>
+		{{ range $key, $taxonomy := .Site.Taxonomies.research_area }}
+			<li>
+				<a href="research_area/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+			</li>
+		{{ end }}
+	</li>
+
+	<li>
+		<h3>Conference ({{ len .Site.Taxonomies.conference }})</h3>
+		{{ range $key, $taxonomy := .Site.Taxonomies.conference }}
+			<li>
+				<a href="conference/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+			</li>
+		{{ end }}
+	</li>
+
+	<li>
+		<h3>Author ({{ len .Site.Taxonomies.authors }})</h3>
+		{{ range $key, $taxonomy := .Site.Taxonomies.authors }}
+			<li>
+				<a href="authors/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+			</li>
+		{{ end }}
+	</li>
+
+	<li>
+		<h3>Year ({{ len .Site.Taxonomies.year }})</h3>
+		{{ range $key, $taxonomy := .Site.Taxonomies.year }}
+			<li>
+				<a href="year/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+			</li>
+		{{ end }}
+	</li>
+
+	<li>
+		<h3>Publication Type ({{ len .Site.Taxonomies.publication_type }})</h3>
+		{{ range $key, $taxonomy := .Site.Taxonomies.publication_type }}
+			<li>
+				<a href="publication_type/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+			</li>
+		{{ end }}
+	</li>
 </ul>
