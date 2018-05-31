@@ -2,94 +2,103 @@
   <h1>{{ .Title }}</h1>
   <h2>{{ .Params.subtitle }}</h2>
   <div class="container-fluid">
-    <div class="row" style="margin-top: 20px;">
-      <h3>Authors</h3>
-    </div>
-    <div class="row" id="authors-section" style="margin-top: 5px;">
-      <div class="col"></div>
-      {{ range $index, $author := .Params.Authors }}
-        <div class="col author-group">
-          <div class="row author-img">
-            <img src="/static/images/authors/{{ index $author 0 }}" alt="Author One">
+    {{ if .Params.Author_details }}
+      <div class="row" style="margin-top: 20px;">
+        <h3>Authors</h3>
+      </div>
+      <div class="row" id="authors-section" style="margin-top: 5px;">
+        <div class="col"></div>
+        {{ range $index, $author := .Params.Author_details }}
+          <div class="col author-group">
+            <div class="row author-img">
+              <img src="/static/images/authors/{{ index $author 0 }}" alt="Author One">
+            </div>
+            <div class="row author-name">
+              <span>{{ index $author 1 }}</span>
+            </div>
           </div>
-          <div class="row author-name">
-            <span>{{ index $author 1 }}</span>
+        {{ end }}
+        <div class="col"></div>
+      </div>
+    {{ end }}
+    
+    {{ if or .Params.Paper .Params.Code .Params.Video .Params.Software }}
+      <div class="row" style="margin-top: 20px;">
+        <h3>Links</h3>
+      </div>
+      <div class="row" id="links-section">
+        <div class="col"></div>
+        {{ if .Params.Paper }}
+          <div class="col link-group">
+            <div class="row link-icon">
+              <img src="/static/icons/pdf.png" height="64">
+            </div>
+            <div class="row link-text">
+              <a href="{{ .Params.Paper }}" download="Paper">Paper</a>
+            </div>
           </div>
-        </div>
-      {{ end }}
-      <div class="col"></div>
-    </div>
+        {{ end }}
+        {{ if .Params.Code }}
+          <div class="col link-group">
+            <div class="row link-icon">
+              <img src="/static/icons/github.png" height="64">
+            </div>
+            <div class="row link-text">
+              <a href="{{ .Params.Code }}" target="_blank">Code</a>
+            </div>
+          </div>
+        {{ end }}
+        {{ if .Params.Video }}
+          <div class="col link-group">
+            <div class="row link-icon">
+              <img src="/static/icons/youtube.png" height="64">
+            </div>
+            <div class="row link-text">
+              <a href="{{ .Params.Video }}" target="_blank">Video</a>
+            </div>
+          </div>
+        {{ end }}
+        {{ if .Params.Software }}
+          <div class="col link-group">
+            <div class="row link-icon">
+              <img src="/static/icons/demo.png" height="64">
+            </div>
+            <div class="row link-text">
+              <a href="{{ .Params.Software }}" target="_blank">Demo</a>
+            </div>
+          </div>
+        {{ end }}
+        <div class="col"></div>
+      </div>
+    {{ end }}
 
-    <div class="row" style="margin-top: 20px;">
-      <h3>Links</h3>
-    </div>
-    <div class="row" id="links-section">
-      <div class="col"></div>
-      {{ if .Params.Paper }}
-        <div class="col link-group">
-          <div class="row link-icon">
-            <img src="/static/icons/pdf.png" height="64">
+    {{ if .Params.Partners }}
+      <div class="row" style="margin-top: 20px;">
+        <h3>Partners</h3>
+      </div>
+      <div class="row" id="partners-section" style="margin-top: 5px;">
+        <div class="col"></div>
+        {{ range $index, $partner := .Params.Partners }}
+          <div class="col partner-group">
+            <div class="row partner-logo">
+              <img src="/static/images/partners/{{ index $partner 0 }}">
+            </div>
+            <div class="row partner-name">
+              <a href="{{ index $partner 1 }}" target="_blank">
+                {{ index $partner 2 }}
+              </a>
+            </div>
           </div>
-          <div class="row link-text">
-            <a href="{{ .Params.Paper }}" download="Paper">Paper</a>
-          </div>
-        </div>
-      {{ end }}
-      {{ if .Params.Code }}
-        <div class="col link-group">
-          <div class="row link-icon">
-            <img src="/static/icons/github.png" height="64">
-          </div>
-          <div class="row link-text">
-            <a href="{{ .Params.Code }}" target="_blank">Code</a>
-          </div>
-        </div>
-      {{ end }}
-      {{ if .Params.Video }}
-        <div class="col link-group">
-          <div class="row link-icon">
-            <img src="/static/icons/youtube.png" height="64">
-          </div>
-          <div class="row link-text">
-            <a href="{{ .Params.Video }}" target="_blank">Video</a>
-          </div>
-        </div>
-      {{ end }}
-      {{ if .Params.Software }}
-        <div class="col link-group">
-          <div class="row link-icon">
-            <img src="/static/icons/demo.png" height="64">
-          </div>
-          <div class="row link-text">
-            <a href="{{ .Params.Software }}" target="_blank">Demo</a>
-          </div>
-        </div>
-      {{ end }}
-      <div class="col"></div>
-    </div>
+        {{ end }}
+        <div class="col"></div>
+      </div>
+    {{ end }}
 
-    <div class="row" style="margin-top: 20px;">
-      <h3>Partners</h3>
-    </div>
-    <div class="row" id="partners-section" style="margin-top: 5px;">
-      <div class="col"></div>
-      {{ range $index, $partner := .Params.Partners }}
-        <div class="col partner-group">
-          <div class="row partner-logo">
-            <img src="/static/images/partners/{{ index $partner 0 }}">
-          </div>
-          <div class="row partner-name">
-            <a href="{{ index $partner 1 }}" target="_blank">
-              {{ index $partner 2 }}
-            </a>
-          </div>
-        </div>
-      {{ end }}
-      <div class="col"></div>
-    </div>
-    <div class="row" style="margin-top: 20px;">
-      {{ .Content }}
-    </div>
+    {{ if gt (len .Content) 0 }}
+      <div class="row" style="margin-top: 20px;">
+        {{ .Content }}
+      </div>
+    {{ end }}
   </div>
 
 {{ end }}

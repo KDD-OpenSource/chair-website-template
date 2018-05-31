@@ -2,27 +2,34 @@
 title: "Metaexp"
 date: 2018-05-14T15:07:02+02:00
 draft: true
+
 subtitle: "Interactive Exploration and Explanation of Large Knowledge Graphs"
 paper: "https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/publications/davide/BehrensWWW2018Metaexp.pdf"
 code: "https://github.com/KDD-OpenSource"
 video: "https://www.youtube.com/watch?v=7aBxVPUpUpM"
 software: "http://metaexp.herokuapp.com/"
-authors: [
-    ["example.jpg", "Author One"],
-    ["example.jpg", "Author Two"],
+author_details: [
+    ["example.jpg", "Author One", "mueller"],
+    ["example.jpg", "Author Two", "mueller"],
     ["example.jpg", "Author Three"],
-    ["example.jpg", "Author Four"]
+    ["example.jpg", "Author Four", "mueller"]
 ]
 partners: [
     ["neo4j.png", "https://neo4j.com/", "neo4j"],
     ["helmholtz.svg", "https://www.helmholtz-muenchen.de/", "Helmholtz München"]
 ]
+
 conference: "WWW"
 year: "2018"
 research_area: "Graph Exploration"
 publication_type: "Demo Paper"
 authors: ["Testauthor 1", "Testauthor 2", "Testauthor 3"]
 
+bibtex: "@inproceedings{behrens2018metaexp,
+            title={MetaExp: Interactive Explanation and Exploration of Large Knowledge Graphs},
+            author={Behrens, Freya and Bischoff, Sebastian and Ladenburger, Pius and R{\"u}ckin, Julius and Seidel, Laurenz and Stolp, Fabian and Vaichenker, Michael and Ziegler, Adrian and Mottin, Davide and Aghaei, Fatemeh and others},
+            year={2018}
+        }"
 ---
 ### Abstract
 We present **MetaExp**, a system that assists the user during the

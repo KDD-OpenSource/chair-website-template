@@ -1,4 +1,15 @@
 <li>
+	{{ if .Params.Author_details }}
+		<div style="margin-bottom: -10px; font-size: 75%;">
+			{{ range $index, $author := .Params.Author_details }}
+				{{ if index $author 2 }}
+					<a href="/team/{{ index $author 2 }}">{{ index $author 1 }}</a> |
+				{{ else }}
+					{{ index $author 1 }} |
+				{{ end }}
+			{{ end }}
+		</div>
+	{{ end }}
 	<h3 style="border-bottom: 1px solid #666666; padding-bottom: 5px;">
 		{{ if gt (len .Content) 0 }}
 		<a href="{{.Permalink}}">{{.Title}}</a>
