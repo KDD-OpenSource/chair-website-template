@@ -1,5 +1,8 @@
 {{ define "main"}}
-  <h1>{{ .Title }}</h1>
+  <h1>
+    {{ .Title }}
+    {{ partial "bibtex_popup.html" . }}
+  </h1>
   <h2>{{ .Params.subtitle }}</h2>
   <div class="container-fluid">
     {{ if .Params.Author_details }}
