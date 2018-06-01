@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://juliusrueckin.github.io/"
 languageCode = "en-us"
 title = "Data Management and Data Exploration"
 preserveTaxonomyNames = true
