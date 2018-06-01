@@ -1,7 +1,7 @@
 ---
 title: "Testpaper"
 date: 2017-05-30T12:40:43+02:00
-draft: true
+draft: false
 
 conference: "WWW"
 year: "2017"

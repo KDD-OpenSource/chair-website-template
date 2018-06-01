@@ -1,7 +1,7 @@
 ---
 title: "Former Members"
 date: 2018-05-15T09:24:05+02:00
-draft: true
+draft: false
 no_individual_information: true
 menu:
   mainmenu:

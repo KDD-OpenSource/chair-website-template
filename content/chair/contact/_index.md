@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 date: 2018-05-15T15:41:30+02:00
-draft: true
+draft: false
 menu:
   mainmenu:
     name: "Contact"

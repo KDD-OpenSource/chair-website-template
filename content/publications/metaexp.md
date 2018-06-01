@@ -1,7 +1,7 @@
 ---
 title: "Metaexp"
 date: 2018-05-14T15:07:02+02:00
-draft: true
+draft: false
 
 subtitle: "Interactive Exploration and Explanation of Large Knowledge Graphs"
 paper: "https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/publications/davide/BehrensWWW2018Metaexp.pdf"

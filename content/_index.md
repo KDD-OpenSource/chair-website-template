@@ -1,7 +1,7 @@
 ---
 title: "Chair for Knowledge Discovery and Data Mining"
 date: 2018-05-14T17:03:06+02:00
-draft: true
+draft: false
 ---
 **Knowledge Discovery and Data Mining**, as part of many scientific and industrial applications, does not end with the execution of algorithms. With data mining algorithms, resulting in discovery of unknown, novel, and unexpected patterns, one should aim at assisting humans in their daily decision making. On the one side, we investigate efficient algorithms, which scale with size and complexity of the data. And on the other side, our algorithms generate verifiable knowledge for human users.
 

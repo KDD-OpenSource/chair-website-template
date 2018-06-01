@@ -1,7 +1,7 @@
 ---
 title: "Diana Stephan"
 date: 2018-05-15T13:06:55+02:00
-draft: true
+draft: false
 category: "secretary"
 designation: "Secretary"
 room: "ABC"

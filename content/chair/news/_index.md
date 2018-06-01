@@ -1,7 +1,7 @@
 ---
 title: "News"
 date: 2018-05-15T15:41:24+02:00
-draft: true
+draft: false
 menu:
   mainmenu:
     name: "News"

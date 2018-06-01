@@ -1,7 +1,7 @@
 ---
 title: "Testadmin"
 date: 2018-05-15T13:07:09+02:00
-draft: true
+draft: false
 category: "technical_staff"
 designation: "Secretary"
 room: "ABC"
