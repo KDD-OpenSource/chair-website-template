@@ -1,7 +1,7 @@
 <h3 style="color: #0067a6;">Guided Search</h3>
 <ul>
 	<li>
-		<h3>Research Area ({{ len .Site.Taxonomies.research_area }})</h3>
+		<h3>Research Area</h3>
 		{{ range $key, $taxonomy := .Site.Taxonomies.research_area }}
 			<li>
 				<a href="research_area/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
@@ -10,7 +10,7 @@
 	</li>
 
 	<li>
-		<h3>Conference ({{ len .Site.Taxonomies.conference }})</h3>
+		<h3>Conference</h3>
 		{{ range $key, $taxonomy := .Site.Taxonomies.conference }}
 			<li>
 				<a href="conference/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
@@ -19,7 +19,7 @@
 	</li>
 
 	<li>
-		<h3>Author ({{ len .Site.Taxonomies.authors }})</h3>
+		<h3>Author</h3>
 		{{ range $key, $taxonomy := .Site.Taxonomies.authors }}
 			<li>
 				<a href="authors/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
@@ -28,7 +28,7 @@
 	</li>
 
 	<li>
-		<h3>Year ({{ len .Site.Taxonomies.year }})</h3>
+		<h3>Year</h3>
 		{{ range $key, $taxonomy := .Site.Taxonomies.year }}
 			<li>
 				<a href="year/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
@@ -37,7 +37,7 @@
 	</li>
 
 	<li>
-		<h3>Publication Type ({{ len .Site.Taxonomies.publication_type }})</h3>
+		<h3>Publication Type</h3>
 		{{ range $key, $taxonomy := .Site.Taxonomies.publication_type }}
 			<li>
 				<a href="publication_type/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
