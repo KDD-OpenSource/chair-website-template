@@ -21,7 +21,7 @@ partners: [
 
 conference: "WWW"
 year: "2018"
-research_area: "Graph Exploration"
+research_area: "Data Exploration"
 publication_type: "Demo Paper"
 authors: ["Testauthor 1", "Testauthor 2", "Testauthor 3"]
 booktitle: "Companion of the The Web Conference 2018 on The Web Conference 2018"
