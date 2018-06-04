@@ -2,6 +2,7 @@
 title: "Prof. Dr. rer. nat. Emmanuel Müller"
 date: 2018-05-15T13:06:49+02:00
 draft: false
+
 category: "scientific_staff"
 designation: "Full Professor, Head of Group"
 room: "ABC"
@@ -9,6 +10,7 @@ mail: "abc@test.com"
 num_of_publications: 9999
 phone_number: "+49 123456789"
 portrait_url: "mueller.jpg"
+weight: 1
 ---
 ## Research Activity
 

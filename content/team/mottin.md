@@ -10,5 +10,6 @@ mail: "davide.mottin(at)hpi.de"
 num_of_publications: 9999
 phone_number: "+49 331 5509 1374"
 portrait_url: "mottin.jpg"
+weight: 2
 ---
 
