@@ -12,9 +12,13 @@
 	{{ end }}
 	<h3 style="border-bottom: 1px solid #666666; padding-bottom: 5px;">
 		{{ if gt (len .Content) 0 }}
-		<a href="{{.Permalink}}">{{.Title}}</a>
+			<a href="{{.Permalink}}">
+				{{.Title}}
+				{{ if .Params.Subtitle }}: {{ .Params.Subtitle }} {{ end }}
+			</a>
 		{{ else }}
 			{{.Title}}
+			{{ if .Params.Subtitle }}: {{ .Params.Subtitle }} {{ end }}
 		{{ end }}
 	</h3>
 	{{ if gt (len .Content) 0 }}
