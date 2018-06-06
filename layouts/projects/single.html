@@ -5,6 +5,7 @@
 			style="width: 20%; float: left; margin-right: 10px; margin-bottom: 10px;">
 		{{ .Content }}
 	</p>
+
 	<h2 style="margin-top: 20px;">Project Members</h2>
 	<table>
 		{{ range $index, $member := .Params.Project_members }}
@@ -24,4 +25,19 @@
 			</tr>
 		{{ end }}
 	</table>
+
+	<h2 style="margin-top: 20px;">Publications</h2>
+	<ul>
+		{{ range $index, $publication := .Params.Related_publications }}
+			<li style="list-style-type: square;">
+				{{ if index $publication 1 }}
+					<a href="/publications/{{ index $publication 1}}">
+						{{ index $publication 0 }}
+					</a>
+				{{ else }}
+					{{ index $publication 0 }}
+				{{ end }}
+			</li>
+		{{ end }}
+	</ul>
 {{ end }}

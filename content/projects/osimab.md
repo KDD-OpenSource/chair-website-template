@@ -12,7 +12,7 @@ project_members: [
 ]
 related_publications: [
     ["MetaExp: Interactive Exploration and Explanation of Large Knowledge Graphs", "metaexp"],
-    ["MetaExp: Interactive Exploration and Explanation of Large Knowledge Graphs", "metaexp"]
+    ["Testpublication without link"]
 ]
 ---
 **(2017 - 2020) Federal Ministry of Transportation and Digital Infrastructure (total funding of 2 Mio. €)**
