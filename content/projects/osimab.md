@@ -6,8 +6,9 @@ draft: false
 subtitle: "Online Security Management System for Bridges"
 title_image: "osimab.jpg"
 project_members: [
-    ["example.jpg", "Davide Mottin", "mottin"],
-    ["example.jpg", "Emmanuel Müller", "mueller"]
+    ["mottin.jpg", "Davide Mottin", "mottin"],
+    ["mueller.jpg", "Emmanuel Müller", "mueller"],
+    ["example.jpg", "Test member"]
 ]
 related_publications: [
     ["MetaExp: Interactive Exploration and Explanation of Large Knowledge Graphs", "metaexp"],

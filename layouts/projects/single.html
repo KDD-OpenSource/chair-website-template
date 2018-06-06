@@ -5,4 +5,23 @@
 			style="width: 20%; float: left; margin-right: 10px; margin-bottom: 10px;">
 		{{ .Content }}
 	</p>
+	<h2 style="margin-top: 20px;">Project Members</h2>
+	<table>
+		{{ range $index, $member := .Params.Project_members }}
+			<tr>
+				<td>
+					<img src="/static/images/staff/{{ index $member 0}}" style="height: 100px;">
+				</td>
+				<td>
+					{{ if index $member 2 }}
+						<a href="/team/{{ index $member 2 }}">
+							{{ index $member 1 }}
+						</a>
+					{{ else }}
+						{{ index $member 1 }}
+					{{ end }}
+				</td>
+			</tr>
+		{{ end }}
+	</table>
 {{ end }}
