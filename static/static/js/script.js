@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+	$(".toggle-summary-btn").click(function(){
+		var $that = $(this);
+		$(this).parent().siblings(".toggle-summary").slideToggle(function(){
+			if(!$that.parent().siblings(".toggle-summary").is(":hidden")){
+				$that.removeClass("fa-plus").addClass("fa-minus");
+			}
+			else{
+				$that.removeClass("fa-minus").addClass("fa-plus");	
+			}
+		});
+	});
+
 	$("#show-bibtex-btn").click(function(){
 		$("#bibtex-dialog").dialog();
 	});
