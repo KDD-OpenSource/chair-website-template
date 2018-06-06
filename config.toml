@@ -28,6 +28,12 @@ preserveTaxonomyNames = true
 		url = "/data_and_code/"
 		weight = 4
 
+	[[menu.mainmenu]]
+		identifier = "projects"
+		name = "Projects"
+		url = "/projects/"
+		weight = 5
+
 [taxonomies]
   conference = "conference"
   year = "year"
