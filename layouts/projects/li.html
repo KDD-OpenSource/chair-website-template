@@ -1,4 +1,4 @@
-<li>
+<li style="clear: both;">
 	<h3 style="border-bottom: 1px solid #666666; padding-bottom: 5px;">
 		{{ if gt (len .Content) 0 }}
 		<a href="{{.Permalink}}">{{.Title}}: {{ .Params.Subtitle}}</a>
@@ -15,8 +15,8 @@
 				{{ if gt (len .Content) (len .Summary) }}
 					...
 				{{ end }}
+				<a href="{{.Permalink}}">Read more</a>
 			</p>
-			<a href="{{.Permalink}}">Read more</a>
 		</div>
 	{{ else }}
 		<div style="margin-bottom: 20px;"></div>
