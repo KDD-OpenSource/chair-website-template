@@ -1,0 +1,8 @@
+{{ define "main" }}
+	<h1>{{ .Title }}: {{ .Params.Subtitle }}</h1>
+	<p>
+		<img src="/static/images/projects/{{ .Params.Title_image }}"
+			style="width: 20%; float: left; margin-right: 10px; margin-bottom: 10px;">
+		{{ .Content }}
+	</p>
+{{ end }}
