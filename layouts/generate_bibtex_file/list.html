@@ -1,0 +1,25 @@
+{{ define "main" }}
+	<h1>
+		{{.Title}}
+	</h1>
+	<p>
+		{{.Content}}
+	</p>
+
+	<textarea id="display-all-bibtex-information" class="form-control" style="width: 100%; height: 500px;"></textarea>
+
+	<div id="all-bibtex-information" style="display: none;">
+		{{ range where .Site.RegularPages "Section" "publications" }}
+			<a class="bibtex-link" href="#" 
+				data-bibtex-available='{{ if .Params.Bibtex }}1{{ else }}0{{ end }}'
+				data-author-field='{{ delimit .Params.Authors ", " }}'
+				data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
+				data-year-field="{{ .Params.Year }}"
+				data-booktitle-field="{{ .Params.Booktitle }}">
+				[BibTex]
+			</a>
+			
+		{{ end }}
+	</div>
+
+{{ end }}

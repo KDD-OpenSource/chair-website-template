@@ -4,7 +4,32 @@ $(document).ready(function(){
 
 	generateBibTexForPublication();
 
+	if(document.URL.includes("generate_bibtex_file")){
+		generateBibTexFile();
+	}
+
 });
+
+function generateBibTexFile(){
+	var all_bibtex_strings = "";
+
+	$("#all-bibtex-information .bibtex-link").each(function(index){
+		if(!parseInt($(this).data("bibtex-available"))){
+			var author = $(this).data("author-field");
+			var title = $(this).data("title-field");
+			var year = $(this).data("year-field");
+			var booktitle = $(this).data("booktitle-field");
+
+			var bibtex_string = 
+			"@inproceedings{{0},\ntitle={{1}},\nauthor={{2}},\nbooktitle={{3}},\nyear={{4}} }".format(generateBibTexKey(title, author, year),title, author, booktitle, year);
+
+			all_bibtex_strings += bibtex_string + "\n\n";
+		}
+	});
+
+	$("#display-all-bibtex-information").val(all_bibtex_strings.trim());
+
+}
 
 function generateBibTexKey(title, author, year){
 	return camelize(author.split(",")[0].replace(".", "") + year + title.split(":")[0]);
