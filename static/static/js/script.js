@@ -1,5 +1,23 @@
 $(document).ready(function(){
 
+	togglePublicationContent();
+
+	generateBibTexForPublication();
+
+});
+
+function generateBibTexKey(title, author, year){
+	return camelize(author.split(",")[0].replace(".", "") + year + title.split(":")[0]);
+}
+
+function camelize(str) {
+	return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function(match, index) {
+		if (+match === 0) return ""; // or if (/\s+/.test(match)) for white spaces
+		return index == 0 ? match.toLowerCase() : match.toUpperCase();
+	});
+}
+
+function togglePublicationContent(){
 	$(".toggle-summary-btn").click(function(){
 		var $that = $(this);
 		$(this).parent().siblings(".toggle-summary").slideToggle(function(){
@@ -11,31 +29,32 @@ $(document).ready(function(){
 			}
 		});
 	});
+}
 
-	$("#show-bibtex-btn").click(function(){
+function generateBibTexForPublication(){
+	$(".bibtex-link").click(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+
 		$("#bibtex-dialog").dialog();
+		if(!parseInt($(this).data("bibtex-available"))){
+			var author = $(this).data("author-field");
+			var title = $(this).data("title-field");
+			var year = $(this).data("year-field");
+			var booktitle = $(this).data("booktitle-field");
+
+			var bibtex_string = 
+							"@inproceedings{{0},<br>\
+							title={{1}},<br>\
+							author={{2}},<br>\
+							booktitle={{3}},<br>\
+							year={{4}} }".format(generateBibTexKey(title, author, year),title, author, booktitle, year);
+
+			$("#bibtex-dialog").html(bibtex_string);
+		}
+
+		return false;
 	});
-
-	if(!parseInt($("#bibtex-available").val())){
-		var author = $("#author-field").val();
-		var title = $("#title-field").val();
-		var year = $("#year-field").val();
-		var booktitle = $("#booktitle-field").val();
-
-		var bibtex_string = 
-						"@inproceedings{{0},<br>\
-						title={{1}},<br>\
-						author={{2}},<br>\
-						booktitle={{3}},<br>\
-						year={{4}} }".format(generateBibtexKey(title, author, year),title, author, booktitle, year);
-
-		$("#bibtex-dialog").html(bibtex_string);
-	}
-
-});
-
-function generateBibtexKey(title, author, year){
-	return (author.split(",")[0] + year + title.split(":")[0]).toLowerCase();
 }
 
 String.prototype.format = function() {

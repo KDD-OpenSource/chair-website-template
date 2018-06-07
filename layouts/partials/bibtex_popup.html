@@ -1,20 +1,15 @@
 <span style="float: right;">
-	<button id="show-bibtex-btn" class="btn btn-primary"
-			style="background-color: #0067A6; border-color: #0067A6; font-weight: bold;">
+	<button class="btn btn-primary bibtex-link" class="btn btn-primary"
+			style="background-color: #0067A6; border-color: #0067A6; font-weight: bold;"
+			data-bibtex-available='{{ if .Params.Bibtex }}1{{ else }}0{{ end }}'
+			data-author-field='{{ delimit .Params.Authors ", " }}'
+			data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
+			data-year-field="{{ .Params.Year }}"
+			data-booktitle-field="{{ .Params.Booktitle }}">
 		<i class="fas fa-quote-right" style="margin-right: 10px;"></i>
 		BibTex
 	</button>
 </span>
-
-{{ if .Params.Bibtex }}
-	<input id="bibtex-available" type="hidden" value=1>
-{{ else }}
-	<input id="bibtex-available" type="hidden" value=0>
-	<input id="author-field" type="hidden" value='{{ delimit .Params.Authors ", " }}'>
-	<input id="title-field" type="hidden" value="{{ .Title }}: {{ .Params.Subtitle }}">
-	<input id="year-field" type="hidden" value="{{ .Params.Year }}">
-	<input id="booktitle-field" type="hidden" value="{{ .Params.Booktitle }}">
-{{ end }}
 
 <div title="Cite" style="display: none;" id="bibtex-dialog">
 	{{ .Params.Bibtex }}
