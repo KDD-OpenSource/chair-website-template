@@ -1,1 +1,1 @@
-# paper-website-template
+# Chair Website Template made with Hugo
