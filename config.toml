@@ -17,22 +17,28 @@ preserveTaxonomyNames = true
 		weight = 2
 
 	[[menu.mainmenu]]
+		identifier = "teaching"
+		name = "Teaching"
+		url = "/teaching/"
+		weight = 3
+
+	[[menu.mainmenu]]
 		identifier = "publications"
 		name = "Publications"
 		url = "/publications/"
-		weight = 3
+		weight = 4
 
 	[[menu.mainmenu]]
 		identifier = "data_and_code"
 		name = "Data & Code"
 		url = "/data_and_code/"
-		weight = 4
+		weight = 5
 
 	[[menu.mainmenu]]
 		identifier = "projects"
 		name = "Projects"
 		url = "/projects/"
-		weight = 5
+		weight = 6
 
 [taxonomies]
   conference = "conference"
