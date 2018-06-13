@@ -49,7 +49,7 @@ preserveTaxonomyNames = true
 	[[menu.mainmenu]]
 		identifier = "B-IT"
 		name = "B-IT"
-		url = "http://bit.uni-bonn.de"
+		url = "http://www.b-it-center.de/"
 		weight = 8
 
 [taxonomies]
