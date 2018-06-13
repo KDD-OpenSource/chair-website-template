@@ -50,20 +50,6 @@ function handleBibTexUmlauts(bibtex_string){
 	return bibtex_string.replace('ä', '{\\"a}').replace('ü', '{\\"u}').replace('ö', '{\\"o}');
 }
 
-function togglePublicationContent(){
-	$(".toggle-summary-btn").click(function(){
-		var $that = $(this);
-		$(this).parent().siblings(".toggle-summary").slideToggle(function(){
-			if(!$that.parent().siblings(".toggle-summary").is(":hidden")){
-				$that.removeClass("fa-plus").addClass("fa-minus");
-			}
-			else{
-				$that.removeClass("fa-minus").addClass("fa-plus");	
-			}
-		});
-	});
-}
-
 function generateBibTexForPublication(){
 	$(".bibtex-link").click(function(e){
 		e.preventDefault();

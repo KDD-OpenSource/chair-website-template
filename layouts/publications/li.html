@@ -20,10 +20,6 @@
 			{{.Title}}
 			{{ if .Params.Subtitle }}: {{ .Params.Subtitle }} {{ end }}
 		{{ end }}
-		{{ if gt (len .Content) 0 }}
-			<i style="color: #0067A6; float: right; cursor: pointer;"
-				class="fas fa-plus toggle-summary-btn"></i>
-		{{ end}}
 	</h3>
 	<b>
 		{{ if .Params.Bibtex }}
@@ -47,17 +43,5 @@
 			</a>
 		{{ end }}
 	</b>
-	{{ if gt (len .Content) 0 }}
-		<div class="short-info toggle-summary" style="display: none;">
-			<p>
-				{{ .Summary }} 
-				{{ if gt (len .Content) (len .Summary) }}
-					...
-				{{ end }}
-			</p>
-			<a href="{{.Permalink}}">Read more</a>
-		</div>
-	{{ else }}
-		<div style="margin-bottom: 20px;"></div>
-	{{ end }}
+	<div style="margin-bottom: 20px;"></div>
 </li>
