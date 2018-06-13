@@ -15,7 +15,7 @@ conference: "WWW"
 year: "2018"
 research_area: "Graph Embeddings"
 publication_type: "Conference Paper"
-authors: ["Anton Tsitsulin", "Davide Mottin", "Panagiotis Karras", "Emmanuel Müller"]
+authors: ["Tsitsulin A.", "Mottin D.", "Karras P.", "Müller E."]
 booktitle: "Companion of the The Web Conference 2018 on The Web Conference 2018"
 ---
 

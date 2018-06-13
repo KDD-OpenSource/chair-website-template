@@ -13,7 +13,7 @@ conference: "DaWaK"
 year: "2017"
 research_area: "Feature Analysis"
 publication_type: "Conference Paper"
-authors: ["Kumar A. S.", "Iglesias Sánchez P.", "Müller E."  
+authors: ["Kumar A. S.", "Iglesias Sanchez P.", "Müller E."  
 ]
 ---
 

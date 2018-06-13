@@ -23,7 +23,7 @@ conference: "WWW"
 year: "2018"
 research_area: "Data Exploration"
 publication_type: "Demo Paper"
-authors: ["Testauthor 1", "Testauthor 2", "Testauthor 3"]
+authors: ["Behrens F.", "Bischoff S.", "Ladenburger P.", "Rückin J.", "Seidel L.", "Stopl F.", "Vaichenker M.", "Ziegler A.", "Mottin D.", "Aghaei F.", "Müller E.", "Preusse M.", "Müller N.", "Hunger M."]
 booktitle: "Companion of the The Web Conference 2018 on The Web Conference 2018"
 ---
 ### Abstract
