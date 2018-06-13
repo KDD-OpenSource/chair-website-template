@@ -4,23 +4,34 @@
 		{{.Content}}
 	</p>
 
-	<h3>Secretary</h3>
+	<div style="margin: 20px 0px;">
+		<img style="width: 100%;" src="/static/images/staff/group-photo.jpg">
+	</div>
+
+	<h2>Head</h2>
+	<ul class="subpages-list">
+		{{ range where .Data.Pages.ByWeight "Params.category" "=" "head_of_group" }}
+			{{ .Render "li" }}
+		{{ end }}
+	</ul>
+
+	<h2 style="margin-top: 20px;">Secretary</h2>
 	<ul class="subpages-list">
 		{{ range where .Data.Pages.ByWeight "Params.category" "=" "secretary" }}
 			{{ .Render "li" }}
 		{{ end }}
 	</ul>
 
-	<h3>Technical staff</h3>
+	<h2 style="margin-top: 20px;">Research staff</h2>
 	<ul class="subpages-list">
-		{{ range where .Data.Pages.ByWeight "Params.category" "=" "technical_staff" }}
+		{{ range where .Data.Pages.ByWeight "Params.category" "=" "scientific_staff" }}
 			{{ .Render "li" }}
 		{{ end }}
 	</ul>
 
-	<h3>Scientific staff</h3>
+	<h2 style="margin-top: 20px;">Student Assistants</h2>
 	<ul class="subpages-list">
-		{{ range where .Data.Pages.ByWeight "Params.category" "=" "scientific_staff" }}
+		{{ range where .Data.Pages.ByWeight "Params.category" "=" "student_assistant" }}
 			{{ .Render "li" }}
 		{{ end }}
 	</ul>

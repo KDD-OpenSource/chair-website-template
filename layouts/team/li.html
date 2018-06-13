@@ -1,7 +1,11 @@
-<li>
-	<a href="{{.Permalink}}">{{.Title}}</a>
+<li style="margin-bottom: 20px;">
 	<div class="short-info">
+		<img style="display: block; float: left; margin-right: 10px; height: 100px;" 
+			src="/static/images/staff/{{ .Params.portrait_url }}">
+		<a href="{{.Permalink}}">{{.Title}}</a><br>
 		{{ .Params.designation }}<br>
-		{{ .Params.phone_number }}
+		{{ .Params.phone_number }}<br>
+		{{ .Params.mail }}<br>
+		{{ .Params.room }}
 	</div>
 </li>

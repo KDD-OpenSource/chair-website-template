@@ -7,6 +7,7 @@ designation: "Secretary"
 room: "ABC"
 mail: "abc@test.com"
 phone_number: "+49 123456789"
+portrait_url: "stephan.jpg"
 ---
 This is the page of Diana Stephan
 

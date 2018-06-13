@@ -3,7 +3,7 @@ title: "Prof. Dr. rer. nat. Emmanuel Müller"
 date: 2018-05-15T13:06:49+02:00
 draft: false
 
-category: "scientific_staff"
+category: "head_of_group"
 designation: "Full Professor, Head of Group"
 room: "ABC"
 mail: "abc@test.com"
