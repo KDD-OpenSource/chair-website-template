@@ -1,0 +1,13 @@
+<h1>News</h1>
+
+<ul>
+	{{ range first 5 (where .Site.RegularPages "Section" "chair").ByDate.Reverse }}
+		<li> 
+			<a href="{{ .URL }}">
+				{{ dateFormat "02.01.2006" .Date }} | {{ .Params.Title }}
+			</a><br />
+			{{ slicestr .Summary 0 100 }} 
+			... <a href="{{ .URL }}">&gt; more</a>
+		</li>
+	{{ end }}
+</ul>

@@ -185,6 +185,35 @@ table tfoot tr{
 	border-bottom: 1px solid #cccccc;
 }
 
+#news-section{
+	background: #FFF;
+	padding: 15px 25px;
+	flex: 5;
+	margin-left: 30px;
+}
+
+#news-section h1{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+#news-section ul{
+	max-width: 100%;
+	min-width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#news-section ul li{
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+#news-section ul li a{
+	font-weight: bold;
+}
+
 #guided-search{
 	background: #FFF;
 	padding: 15px 25px;
