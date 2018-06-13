@@ -21,6 +21,14 @@
 			{{ if .Params.Subtitle }}: {{ .Params.Subtitle }} {{ end }}
 		{{ end }}
 	</h3>
+	{{ if .Params.Summary_details }}
+		{{ if (index .Params.Summary_details 2) }}
+			<a href="/static/publications/{{ index .Params.Summary_details 2 }}" download="{{ .Params.Title }}.pdf">
+				[PDF-Download]
+			</a>
+		{{ end }}
+	{{ end }}
+
 	<b>
 		{{ if .Params.Bibtex }}
 			<a class="bibtex-link" href="#" 
@@ -43,5 +51,19 @@
 			</a>
 		{{ end }}
 	</b>
+	<br />
+
+	{{ if .Params.Summary_details }}
+		{{ index .Params.Summary_details 0 }} 
+	{{ end }}
+	<b>({{ .Params.Conference }} {{ .Params.Year }})</b>
+	<br/>
+
+	{{ if .Params.Summary_details }}
+		[<a href="{{ index .Params.Summary_details 1 }}">
+			{{ .Params.Conference }} {{ .Params.Year }}
+		</a>]
+	{{ end }}
+
 	<div style="margin-bottom: 20px;"></div>
 </li>

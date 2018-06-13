@@ -4,16 +4,21 @@ date: 2018-05-14T15:07:02+02:00
 draft: false
 
 subtitle: "Interactive Exploration and Explanation of Large Knowledge Graphs"
+
+summary_details: ["Proc. of The Web Conference", "https://www2018.thewebconf.org/", "metaexp.pdf"]
+
 paper: "https://hpi.de/fileadmin/user_upload/fachgebiete/mueller/publications/davide/BehrensWWW2018Metaexp.pdf"
 code: "https://github.com/KDD-OpenSource"
 video: "https://www.youtube.com/watch?v=7aBxVPUpUpM"
 software: "http://metaexp.herokuapp.com/"
+
 author_details: [
     ["example.jpg", "Author One", "mueller"],
     ["example.jpg", "Author Two", "mueller"],
     ["example.jpg", "Author Three"],
     ["example.jpg", "Author Four", "mueller"]
 ]
+
 partners: [
     ["neo4j.png", "https://neo4j.com/", "neo4j"],
     ["helmholtz.svg", "https://www.helmholtz-muenchen.de/", "Helmholtz München"]
@@ -24,6 +29,7 @@ year: "2018"
 research_area: "Data Exploration"
 publication_type: "Demo Paper"
 authors: ["Behrens F.", "Bischoff S.", "Ladenburger P.", "Rückin J.", "Seidel L.", "Stopl F.", "Vaichenker M.", "Ziegler A.", "Mottin D.", "Aghaei F.", "Müller E.", "Preusse M.", "Müller N.", "Hunger M."]
+
 booktitle: "Companion of the The Web Conference 2018 on The Web Conference 2018"
 bibtex: "@inproceedings{behrens2018metaexp,
   title={MetaExp: Interactive Explanation and Exploration of Large Knowledge Graphs},
