@@ -2,45 +2,45 @@
 <ul>
 	<li>
 		<h3>Research Area</h3>
-		{{ range $key, $taxonomy := .Site.Taxonomies.research_area }}
+		{{ range $key, $taxonomy := .Site.Taxonomies.research_area.ByCount }}
 			<li>
-				<a href="research_area/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+				<a href="research_area/{{ $taxonomy.Name | urlize }}">{{ $taxonomy.Name }} ({{ $taxonomy.Count }})</a>
 			</li>
 		{{ end }}
 	</li>
 
 	<li>
 		<h3>Conference</h3>
-		{{ range $key, $taxonomy := .Site.Taxonomies.conference }}
+		{{ range $key, $taxonomy := .Site.Taxonomies.conference.ByCount }}
 			<li>
-				<a href="conference/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+				<a href="conference/{{ $taxonomy.Name | urlize }}">{{ $taxonomy.Name }} ({{ $taxonomy.Count }})</a>
 			</li>
 		{{ end }}
 	</li>
 
 	<li>
 		<h3>Author</h3>
-		{{ range $key, $taxonomy := .Site.Taxonomies.authors }}
+		{{ range $key, $taxonomy := .Site.Taxonomies.authors.ByCount }}
 			<li>
-				<a href="authors/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+				<a href="authors/{{ $taxonomy.Name | urlize }}">{{ $taxonomy.Name }} ({{ $taxonomy.Count }})</a>
 			</li>
 		{{ end }}
 	</li>
 
 	<li>
 		<h3>Year</h3>
-		{{ range $key, $taxonomy := .Site.Taxonomies.year }}
+		{{ range $key, $taxonomy := .Site.Taxonomies.year.ByCount }}
 			<li>
-				<a href="year/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+				<a href="year/{{ $taxonomy.Name | urlize }}">{{ $taxonomy.Name }} ({{ $taxonomy.Count }})</a>
 			</li>
 		{{ end }}
 	</li>
 
 	<li>
 		<h3>Publication Type</h3>
-		{{ range $key, $taxonomy := .Site.Taxonomies.publication_type }}
+		{{ range $key, $taxonomy := .Site.Taxonomies.publication_type.ByCount }}
 			<li>
-				<a href="publication_type/{{ $key | urlize }}">{{ $key }} ({{ len $taxonomy}})</a>
+				<a href="publication_type/{{ $taxonomy.Name | urlize }}">{{ $taxonomy.Name }} ({{ $taxonomy.Count }})</a>
 			</li>
 		{{ end }}
 	</li>
