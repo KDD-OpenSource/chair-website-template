@@ -26,19 +26,31 @@ preserveTaxonomyNames = true
 		identifier = "publications"
 		name = "Publications"
 		url = "/publications/"
-		weight = 4
+		weight = 7
 
 	[[menu.mainmenu]]
-		identifier = "data_and_code"
-		name = "Data & Code"
-		url = "/data_and_code/"
-		weight = 5
+		identifier = "research"
+		name = "Research"
+		url = "/research/"
+		weight = 4
 
 	[[menu.mainmenu]]
 		identifier = "projects"
 		name = "Projects"
 		url = "/projects/"
+		weight = 5
+
+	[[menu.mainmenu]]
+		identifier = "data_science"
+		name = "Data Science"
+		url = "/data_science/"
 		weight = 6
+
+	[[menu.mainmenu]]
+		identifier = "B-IT"
+		name = "B-IT"
+		url = "http://bit.uni-bonn.de"
+		weight = 8
 
 [taxonomies]
   conference = "conference"
