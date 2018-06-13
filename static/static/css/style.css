@@ -101,14 +101,13 @@ table tfoot tr{
 
 #top-menu a {
 	color: white;
-	font-size: 150%;
-	margin-right: 16%;
-	margin-top: 7px;
+	font-size: 110%;
+	margin-right: 15.5%;
+	margin-top: 20px;
 	float: right;
 	display: block;
 	text-decoration: none;
 	font-weight: bold;
-	text-shadow: 1px 0px #000;
 }
 
 #header-band{
