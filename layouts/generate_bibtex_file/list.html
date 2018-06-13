@@ -10,14 +10,24 @@
 
 	<div id="all-bibtex-information" style="display: none;">
 		{{ range where .Site.RegularPages "Section" "publications" }}
-			<a class="bibtex-link" href="#" 
-				data-bibtex-available='{{ if .Params.Bibtex }}1{{ else }}0{{ end }}'
-				data-author-field='{{ delimit .Params.Authors ", " }}'
-				data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
-				data-year-field="{{ .Params.Year }}"
-				data-booktitle-field="{{ .Params.Booktitle }}">
-				[BibTex]
-			</a>
+			{{ if .Params.Bibtex }}
+				<a class="bibtex-link" href="#" 
+					data-bibtex-available="1"
+					data-bibtex-customized="{{ .Params.Bibtex }}"
+					data-author-field='{{ delimit .Params.Authors ", " }}'
+					data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
+					data-year-field="{{ .Params.Year }}"
+					data-booktitle-field="{{ .Params.Booktitle }}">
+				</a>
+			{{ else }}
+				<a class="bibtex-link" href="#" 
+					data-bibtex-available="0"
+					data-author-field='{{ delimit .Params.Authors ", " }}'
+					data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
+					data-year-field="{{ .Params.Year }}"
+					data-booktitle-field="{{ .Params.Booktitle }}">
+				</a>
+			{{ end }}
 			
 		{{ end }}
 	</div>

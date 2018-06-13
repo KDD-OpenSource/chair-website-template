@@ -26,14 +26,26 @@
 		{{ end}}
 	</h3>
 	<b>
-		<a class="bibtex-link" href="#" 
-			data-bibtex-available='{{ if .Params.Bibtex }}1{{ else }}0{{ end }}'
+		{{ if .Params.Bibtex }}
+			<a class="bibtex-link" href="#" 
+				data-bibtex-available="1"
+				data-bibtex-customized="{{ .Params.Bibtex }}"
+				data-author-field='{{ delimit .Params.Authors ", " }}'
+				data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
+				data-year-field="{{ .Params.Year }}"
+				data-booktitle-field="{{ .Params.Booktitle }}">
+				[BibTex]
+			</a>
+		{{ else }}
+			<a class="bibtex-link" href="#" 
+			data-bibtex-available="0"
 			data-author-field='{{ delimit .Params.Authors ", " }}'
 			data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
 			data-year-field="{{ .Params.Year }}"
 			data-booktitle-field="{{ .Params.Booktitle }}">
-			[BibTex]
-		</a>
+				[BibTex]
+			</a>
+		{{ end }}
 	</b>
 	{{ if gt (len .Content) 0 }}
 		<div class="short-info toggle-summary" style="display: none;">

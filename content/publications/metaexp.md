@@ -25,6 +25,11 @@ research_area: "Data Exploration"
 publication_type: "Demo Paper"
 authors: ["Behrens F.", "Bischoff S.", "Ladenburger P.", "Rückin J.", "Seidel L.", "Stopl F.", "Vaichenker M.", "Ziegler A.", "Mottin D.", "Aghaei F.", "Müller E.", "Preusse M.", "Müller N.", "Hunger M."]
 booktitle: "Companion of the The Web Conference 2018 on The Web Conference 2018"
+bibtex: "@inproceedings{behrens2018metaexp,
+  title={MetaExp: Interactive Explanation and Exploration of Large Knowledge Graphs},
+  author={Behrens, Freya and Bischoff, Sebastian and Ladenburger, Pius and R{\"u}ckin, Julius and Seidel, Laurenz and Stolp, Fabian and Vaichenker, Michael and Ziegler, Adrian and Mottin, Davide and Aghaei, Fatemeh and others},
+  year={2018}
+}"
 ---
 ### Abstract
 We present **MetaExp**, a system that assists the user during the

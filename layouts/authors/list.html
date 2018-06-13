@@ -7,7 +7,7 @@
 		{{.Content}}
 	</p>
 
-	{{ partial "sort_by_taxonomy_header.html" }}
+	<div title="Cite" style="display: none;" id="bibtex-dialog"></div>
 
 	<ul class="subpages-list">
 		{{ range .Data.Pages.GroupByDate "2006"  }}
