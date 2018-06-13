@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-	togglePublicationContent();
-
 	generateBibTexForPublication();
 
 	if(document.URL.includes("generate_bibtex_file")){

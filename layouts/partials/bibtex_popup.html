@@ -1,14 +1,28 @@
 <span style="float: right;">
-	<button class="btn btn-primary bibtex-link" class="btn btn-primary"
-			style="background-color: #0067A6; border-color: #0067A6; font-weight: bold;"
-			data-bibtex-available='{{ if .Params.Bibtex }}1{{ else }}0{{ end }}'
-			data-author-field='{{ delimit .Params.Authors ", " }}'
-			data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
-			data-year-field="{{ .Params.Year }}"
-			data-booktitle-field="{{ .Params.Booktitle }}">
-		<i class="fas fa-quote-right" style="margin-right: 10px;"></i>
-		BibTex
-	</button>
+	{{ if .Params.Bibtex }}
+		<button class="btn btn-primary bibtex-link"
+				style="background-color: #0067A6; border-color: #0067A6; font-weight: bold;"
+				data-bibtex-available="1"
+				data-bibtex-customized="{{ .Params.Bibtex }}"
+				data-author-field='{{ delimit .Params.Authors ", " }}'
+				data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
+				data-year-field="{{ .Params.Year }}"
+				data-booktitle-field="{{ .Params.Booktitle }}">
+			<i class="fas fa-quote-right" style="margin-right: 10px;"></i>
+			BibTex
+		</button>
+	{{ else }}
+		<button class="btn btn-primary bibtex-link"
+				style="background-color: #0067A6; border-color: #0067A6; font-weight: bold;"
+				data-bibtex-available="0"
+				data-author-field='{{ delimit .Params.Authors ", " }}'
+				data-title-field="{{ .Title }}: {{ .Params.Subtitle }}"
+				data-year-field="{{ .Params.Year }}"
+				data-booktitle-field="{{ .Params.Booktitle }}">
+			<i class="fas fa-quote-right" style="margin-right: 10px;"></i>
+			BibTex
+		</button>
+	{{ end }}
 </span>
 
 <div title="Cite" style="display: none;" id="bibtex-dialog">
