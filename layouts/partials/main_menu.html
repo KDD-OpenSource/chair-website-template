@@ -25,4 +25,15 @@
 			</li>
 		{{ end }}
 	{{ end }}
+	<li style="border-top: 3px solid #cbe0ed;padding-top: 20px; border-bottom: none;"></li>
+	{{ range .Site.Menus.externalmenu }}
+		<li>
+			<a href="{{ .URL }}">
+				{{ .Pre }}
+				<span>{{ .Name }}</span>
+			</a>
+		</li>
+	{{ end }}
+
+	
 </ul>

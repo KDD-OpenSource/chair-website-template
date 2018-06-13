@@ -46,11 +46,17 @@ preserveTaxonomyNames = true
 		url = "/data_science/"
 		weight = 6
 
-	[[menu.mainmenu]]
+	[[menu.externalmenu]]
 		identifier = "B-IT"
 		name = "B-IT"
 		url = "http://www.b-it-center.de/"
 		weight = 8
+
+	[[menu.externalmenu]]
+		identifier = "uni-bonn"
+		name = "Universität Bonn"
+		url = "http://www.uni-bonn.de/"
+		weight = 9
 
 [taxonomies]
   conference = "conference"
