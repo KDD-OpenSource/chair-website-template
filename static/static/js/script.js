@@ -70,13 +70,14 @@ function generateBibTexForPublication(){
 		e.stopPropagation();
 
 		$("#bibtex-dialog").dialog();
+		var bibtex_string = "";
 		if(!parseInt($(this).data("bibtex-available"))){
 			var author = $(this).data("author-field");
 			var title = $(this).data("title-field");
 			var year = $(this).data("year-field");
 			var booktitle = $(this).data("booktitle-field");
 
-			var bibtex_string = 
+			bibtex_string = 
 							"@inproceedings{{0},<br>\
 							title={{1}},<br>\
 							author={{2}},<br>\
@@ -84,8 +85,12 @@ function generateBibTexForPublication(){
 							year={{4}} }".format(generateBibTexKey(title, author, year),title, author, booktitle, year);
 
 			bibtex_string = handleBibTexUmlauts(bibtex_string);
-			$("#bibtex-dialog").html(bibtex_string);
 		}
+		else{
+			bibtex_string = $(this).data("bibtex-customized");
+		}
+
+		$("#bibtex-dialog").html(bibtex_string);
 
 		return false;
 	});
