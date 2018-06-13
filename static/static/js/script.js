@@ -25,8 +25,12 @@ function generateBibTexFile(){
 
 			all_bibtex_strings += bibtex_string + "\n\n";
 		}
+		else{
+			all_bibtex_strings += $(this).data("bibtex-customized") + "\n\n";
+		}
 	});
 
+	all_bibtex_strings = handleBibTexUmlauts(all_bibtex_strings);
 	$("#display-all-bibtex-information").val(all_bibtex_strings.trim());
 
 }
@@ -40,6 +44,10 @@ function camelize(str) {
 		if (+match === 0) return ""; // or if (/\s+/.test(match)) for white spaces
 		return index == 0 ? match.toLowerCase() : match.toUpperCase();
 	});
+}
+
+function handleBibTexUmlauts(bibtex_string){
+	return bibtex_string.replace('ä', '{\\"a}').replace('ü', '{\\"u}').replace('ö', '{\\"o}');
 }
 
 function togglePublicationContent(){
@@ -75,6 +83,7 @@ function generateBibTexForPublication(){
 							booktitle={{3}},<br>\
 							year={{4}} }".format(generateBibTexKey(title, author, year),title, author, booktitle, year);
 
+			bibtex_string = handleBibTexUmlauts(bibtex_string);
 			$("#bibtex-dialog").html(bibtex_string);
 		}
 
